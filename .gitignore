@@ -139,3 +139,5 @@ CCCoreLibExport.h
 #VS2019 default cmake build & install paths
 /out/
 plugins/private
+.release/
+build/

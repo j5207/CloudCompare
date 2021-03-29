@@ -1,0 +1,22 @@
+name: cloud_compare
+version: 0.0.1
+
+# deps:
+#   ts_rpc: any
+#   some_package: requirement
+
+extra_deps:
+  apt: libqt5svg5-dev
+
+build: |
+  if tsp show --path zoro > /dev/null 2>&1; then
+    echo "Zoro installed, build Zoro implementation by default!"
+    USE_ZORO=ON
+  fi
+  [[ -n $CLEANUP ]] && rm -r build
+  mkdir -p build
+  cd build
+  cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DUSE_ZORO=$USE_ZORO -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE ..
+  make -j8
+  # roscore &
+  make install

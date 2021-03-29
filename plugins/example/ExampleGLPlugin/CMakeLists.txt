@@ -1,6 +1,6 @@
-option( PLUGIN_EXAMPLE_GL "Install example GL plugin" OFF )
+option( PLUGIN_EXAMPLE_GL "Install example GL plugin" ON )
 
-if( PLUGIN_EXAMPLE_GL )
+# if( PLUGIN_EXAMPLE_GL )
     project( ExampleGLPlugin )
     
     AddPlugin(
@@ -11,4 +11,4 @@ if( PLUGIN_EXAMPLE_GL )
     add_subdirectory( include )
     add_subdirectory( src )
     add_subdirectory( shaders )
-endif()
+# endif()

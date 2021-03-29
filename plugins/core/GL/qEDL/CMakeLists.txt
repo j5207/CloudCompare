@@ -1,6 +1,6 @@
 option( PLUGIN_GL_QEDL "Install qEDL plugin" OFF )
 
-if( PLUGIN_GL_QEDL )
+# if( PLUGIN_GL_QEDL )
 	project( QEDL_GL_PLUGIN )
 	
 	AddPlugin(
@@ -12,4 +12,4 @@ if( PLUGIN_GL_QEDL )
 	add_subdirectory( include )
 	add_subdirectory( src )
 	add_subdirectory( shaders )
-endif()
+# endif()

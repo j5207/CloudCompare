@@ -1,8 +1,7 @@
-option( PLUGIN_STANDARD_QPCL "Install qPCL plugin" OFF )
+option( PLUGIN_STANDARD_QPCL "Install qPCL plugin====================" ON )
 
 if( PLUGIN_STANDARD_QPCL )	  
 	project( QPCL_PLUGIN )
-	
 	AddPlugin( NAME ${PROJECT_NAME} )
 
 	add_subdirectory( doc )

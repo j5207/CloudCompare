@@ -1,6 +1,6 @@
 option( PLUGIN_STANDARD_QANIMATION "Install qAnimation plugin" OFF )
 
-if( PLUGIN_STANDARD_QANIMATION )
+# if( PLUGIN_STANDARD_QANIMATION )
 	option( QANIMATION_WITH_FFMPEG_SUPPORT "Setup FFMPEG support (to create movies instead of images with qAnimation)" OFF )
 
 	project( QANIMATION_PLUGIN )
@@ -17,4 +17,4 @@ if( PLUGIN_STANDARD_QANIMATION )
 		target_link_libraries( ${PROJECT_NAME} QTFFMPEG_LIB )
 		target_compile_definitions( ${PROJECT_NAME} PRIVATE QFFMPEG_SUPPORT )
 	endif()
-endif()
+# endif()
